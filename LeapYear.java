@@ -1,10 +1,15 @@
+import java.util.Scanner;
+
 public class LeapYear {
 
-    public static void main(String[] args) {
+    static int inputYear(){
 
-        int year;
+        System.out.print("Enter the Year: ");
+        return new Scanner(System.in).nextInt();
 
-        year = 2016;
+    }
+
+    static void leapYearChecket(int year){
 
         if (year % 4 == 0){
             System.out.println(year + " is Leap Year!");
@@ -12,6 +17,15 @@ public class LeapYear {
         else {
             System.out.println(year + " is not Leap Year!");
         }
+
+    }
+
+    public static void main(String[] args) {
+
+        int year;
+
+        year = inputYear();
+        leapYearChecket(year);
 
     }
 }
